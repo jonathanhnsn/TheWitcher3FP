@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #0e1012;
+    color: #e1e1e1;
+}
+
+h2, h3 {
+    color: #cd2a2a;
+    font-family: 'Cinzel', serif;
+}
+
+header {
+    display: inline;
+}
+
+.jumbotron {
+    font-size: 20px;
+    text-align: center;
+    padding: 60px;
+
+    background-color: #1a1e21;
+    color: white;
+    background-image: url(https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23336788/The_Witcher_3_Wild_Hunt_Geralt_Ciri_RGB.jpg?quality=90&strip=all&crop=0%2C4.7767100056529%2C100%2C90.446579988694&w=750);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.jumbotron::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    z-index: 1;
+}
+
+.jumbotron h1, .jumbotron p {
+    position: relative;
+
+    z-index: 2;
+}
+
+.jumbotron h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+nav {
+    background-color: #202428;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 3px solid #cd2a2a;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    justify-content: center;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    font-weight: bold;
+    background-color: rgba(205, 42, 42, 0.7);
+}
+
+main {
+    pad: 20px;
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+aside {
+    flex: 1;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #1a1e21;
+    border-left: 4px solid #cd2a2a;
+}
+
+.image{
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #202428;
+    text-align: center;
+    font-weight: bold;
+    border-top: 3px solid #cd2a2a;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 5px;
+    border: 3px solid #cd2a2a;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+table th {
+    background-color: rgba(205, 42, 42, 0.2);
+    color: #cd2a2a;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        gap: 0.8rem;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .jumbotron {
+        padding: 30px;
+    }
+
+    .jumbotron h1 {
+        font-size: 2em;
+    }
+
+    main aside {
+        width: 100%;
+    }
+}
